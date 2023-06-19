@@ -23,6 +23,7 @@ public class Journal {
     }
 
     // BREAKING SRP - data persistence is another concern and should not be part of the Journal!
+    // instead use newly created data persistence Class!
     public void saveToFile(String filename) throws FileNotFoundException {
         try (PrintStream printStream = new PrintStream(filename)) {
             printStream.println(this);
