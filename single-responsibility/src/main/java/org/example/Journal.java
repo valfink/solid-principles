@@ -1,5 +1,7 @@
 package org.example;
 
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,5 +20,12 @@ public class Journal {
     @Override
     public String toString() {
         return String.join(System.lineSeparator(), entries);
+    }
+
+    // BREAKING SRP - data persistence is another concern and should not be part of the Journal!
+    public void saveToFile(String filename) throws FileNotFoundException {
+        try (PrintStream printStream = new PrintStream(filename)) {
+            printStream.println(this);
+        }
     }
 }
