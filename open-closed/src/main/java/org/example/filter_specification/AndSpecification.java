@@ -4,7 +4,8 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class AndSpecification<T> implements Specification<T> {
-    private Specification<T> first, second;
+    private Specification<T> first;
+    private Specification<T> second;
 
     @Override
     public boolean isSatisfied(T item) {
