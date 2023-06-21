@@ -1,6 +1,7 @@
 package org.example;
 
 public class BadResearch {
+    // high-level module
     private final BadRelationships relationships;
 
     public BadResearch(BadRelationships badRelationships) {
