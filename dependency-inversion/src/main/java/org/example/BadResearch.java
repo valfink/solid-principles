@@ -2,6 +2,7 @@ package org.example;
 
 public class BadResearch {
     // high-level module
+    // depends on low-level module BadRelationships, also on its implementation (List<Triplet<...>>)!
     private final BadRelationships relationships;
 
     public BadResearch(BadRelationships badRelationships) {
